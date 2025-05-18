@@ -10,6 +10,8 @@ vim.g.mapleader = " "
 
 local python_utils = require("utils.python")
 
+vim.g.python3_host_prog = os.getenv("HOME") .. '/.config/nvim/.venv/bin/python'
+
 local venv_python = python_utils.find_venv_python()
 if venv_python then
 	vim.g.python3_host_prog = venv_python
